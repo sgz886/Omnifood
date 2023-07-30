@@ -8,8 +8,8 @@ import c5 from '../../assets/img/customers/customer-5.jpg';
 import c6 from '../../assets/img/customers/customer-6.jpg';
 
 const Section = styled.section`
-  background-color: var(--color-main-tint);
-  padding: 6rem 0;
+  background-color: var(--color-background-tint);
+  padding: 6rem 2rem;
 `;
 const Container = styled.div`
   max-width: 81rem;
@@ -59,7 +59,7 @@ const Image2 = styled.img`
   width: 3rem;
   border-radius: 50%;
   margin-right: -1rem;
-  border: 3px solid var(--color-main-tint);
+  border: 3px solid var(--color-background-tint);
   &:last-child {
     margin-right: 0;
   }
