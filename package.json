@@ -47,7 +47,6 @@
     "styled-components": "^6.0.4"
   },
   "lint-staged": {
-    "**/*": "prettier . --write --ignore-unknown",
     "*.{js,jsx}": "eslint --fix"
   }
 }

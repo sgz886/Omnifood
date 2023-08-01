@@ -76,12 +76,13 @@ a {
   --color-main-shade: #cf711f;
   --color-background-normal: #fff;
   --color-background-tint: #fdf2e9;
+  --color-background-shade: #fae5d3;
   /* --color-accent-normal:#fff; */
   /* --color-accent-tint:#fff; */
   /* --color-accent-shade:#fff; */
   --color-grey-normal: #333;
-  /* --color-grey-tint:#fff; */
-  /* --color-grey-shade:#fff; */
+  --color-grey-tint:#ddd;
+  --color-grey-shade:#888;
 }
 html {
   /* font-size: 62.5%; equals to 10px */

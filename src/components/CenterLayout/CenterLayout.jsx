@@ -1,6 +1,6 @@
-function CenterLayout({ children, additionalClass }) {
+function CenterLayout({ children, className }) {
   return (
-    <div className={`max-w-[75rem] mx-auto ${additionalClass}`}>{children}</div>
+    <div className={`max-w-[75rem] mx-auto ${className || ''}`}>{children}</div>
   );
 }
 
