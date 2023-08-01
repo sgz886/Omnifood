@@ -4,7 +4,7 @@
   "private": true,
   "main": "src/index.jsx",
   "scripts": {
-    "start": "npx webpack serve --mode=development",
+    "start": "open-cli http://localhost:3000 && npx webpack serve --mode=development",
     "build": "npx webpack build --mode=production",
     "lint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -29,6 +29,7 @@
     "html-webpack-plugin": "^5.5.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
+    "open-cli": "^7.2.0",
     "postcss": "^8.4.26",
     "postcss-loader": "^7.3.3",
     "prettier": "3.0.0",
