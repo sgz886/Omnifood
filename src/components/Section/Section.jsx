@@ -1,5 +1,9 @@
+import classNames from 'classnames';
+
 function Section({ children, className }) {
-  return <section className={`px-8 py-24 ${className || ''}`}>{children}</section>;
+  const defaultStyle = 'px-8 py-24';
+  const finalStyle = classNames(defaultStyle, className);
+  return <section className={finalStyle}>{children}</section>;
 }
 
 export default Section;
