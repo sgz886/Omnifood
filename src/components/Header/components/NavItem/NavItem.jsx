@@ -1,19 +1,13 @@
 import classNames from 'classnames';
 
-function NavItem({ children, likeButton }) {
-  const normalStyle = `text-grey-normal font-medium text-lg
-                        transition duration-300 hover:text-main-shade`;
-  const likeButtonStyle = `px-5 py-2 rounded-lg
-                            bg-main-normal text-background-normal
-                            hover:bg-main-shade hover:text-background-normal`;
-
+function NavItem({ children, className }) {
+  const defaultStyle = [
+    'font-medium text-lg leading-none',
+    'transition duration-300 hover:text-main-shade',
+  ];
+  const finalStyle = classNames(defaultStyle, className);
   return (
-    <a
-      href='/'
-      className={classNames(`${normalStyle}`, {
-        [`${likeButtonStyle}`]: likeButton,
-      })}
-    >
+    <a href='/' className={finalStyle}>
       {children}
     </a>
   );

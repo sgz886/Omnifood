@@ -14,7 +14,7 @@ import AvatarImage from './components/AvatarImage';
 function Hero() {
   return (
     <Section className='pt-12 bg-background-tint'>
-      <CenterLayout className='grid gap-24 grid-cols-2 items-center'>
+      <CenterLayout className='max-w-[77.25rem] grid gap-24 grid-cols-2 items-center'>
         <div>
           <H1 className='mb-8'>
             A healthy meal delivered to your door, every single day
