@@ -8,7 +8,7 @@ import c6 from '../../assets/img/customers/customer-6.jpg';
 import Section from '../Section';
 import CenterLayout from '../CenterLayout';
 import H1 from '../H1';
-import ButtonLink from './components/ButtonLink';
+import ButtonLink from '../ButtonLink';
 import AvatarImage from './components/AvatarImage';
 
 function Hero() {

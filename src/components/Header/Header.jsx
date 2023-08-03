@@ -5,7 +5,7 @@ function Header() {
   return (
     <header
       className='flex justify-between items-center
-     bg-background-tint h-24 px-12'
+                 bg-background-tint h-24 px-12'
     >
       <img className='h-6' src={logo} alt='logo' />
       <nav className='flex gap-8 items-center'>

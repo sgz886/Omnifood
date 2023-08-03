@@ -72,7 +72,7 @@ a {
   --line-height-medium: 1.2;
   --line-height-paragraph: 1.6;
   --color-main-normal: #e67e22;
-  --color-main-tint: yellow;
+  --color-main-tint: #ffd43b;
   --color-main-shade: #cf711f;
   --color-background-normal: #fff;
   --color-background-tint: #fdf2e9;
@@ -81,8 +81,9 @@ a {
   /* --color-accent-tint:#fff; */
   /* --color-accent-shade:#fff; */
   --color-grey-normal: #333;
-  --color-grey-tint:#ddd;
+  --color-grey-darker:#555;
   --color-grey-shade:#888;
+  --color-grey-tint:#ddd;
 }
 html {
   /* font-size: 62.5%; equals to 10px */
@@ -91,7 +92,7 @@ body {
   font-family: Rubik, sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  color: var(--color-grey-darker);
   background-color: var(--color-background-normal);
 }
 h1 {

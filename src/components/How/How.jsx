@@ -36,7 +36,7 @@ function How() {
     <Section>
       <CenterLayout>
         <div className='pb-24'>
-          <SubHeading>How it works</SubHeading>
+          <SubHeading className='mb-4'>How it works</SubHeading>
           <H2>Your daily dose of health in 3 simple steps</H2>
         </div>
         <div className='flex flex-col gap-24'>

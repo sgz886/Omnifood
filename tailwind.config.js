@@ -11,6 +11,7 @@ module.exports = {
         'background-tint': 'var(--color-background-tint)',
         'background-shade': 'var(--color-background-shade)',
         'grey-normal': 'var(--color-grey-normal)',
+        'grey-darker': 'var(--color-grey-darker)',
         'grey-tint': 'var(--color-grey-tint)',
         'grey-shade': 'var(--color-grey-shade)',
       },

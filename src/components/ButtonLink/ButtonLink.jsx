@@ -5,7 +5,7 @@ function ButtonLink({
 }) {
   const defaultStyle = [
     'px-8 py-4 rounded-lg',
-    'text-xl font-semibold',
+    'text-xl font-semibold leading-5',
     { 'bg-main-normal text-background-normal': color !== 'white' },
     { 'bg-background-normal text-grey-normal': color === 'white' },
     'transition duration-300',

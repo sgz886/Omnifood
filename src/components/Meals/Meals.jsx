@@ -4,42 +4,87 @@ import SubHeading from '../SubHeading';
 import H2 from '../H2';
 import meal1 from '../../assets/img/meals/meal-1.jpg';
 import meal2 from '../../assets/img/meals/meal-2.jpg';
-import Meal from './components';
+import MealCard from './components/MealCard';
 import H3 from '../H3';
-import checkmark from '../../assets/img/meals/checkmark-outline.svg';
-import MealAttribute from './components/components/MealAttribute';
+import DescriptionWithIcon from '../DescriptionWithIcon';
+import IconType from '../DescriptionWithIcon/components/IconType';
 
 const MealsData = [
   {
     picture: meal1,
     tags: ['vegetarian'],
     name: 'Jananese Gyozas',
-    calories: 650,
-    nutriScore: 74,
-    rating: 4.9,
+    calories: {
+      detail: 650,
+      icon: 'flame',
+    },
+    nutriScore: {
+      detail: 74,
+      icon: 'restaurant',
+    },
+    rating: {
+      detail: 4.9,
+      icon: 'star',
+    },
     ratingNumber: 537,
   },
   {
     picture: meal2,
     tags: ['vegan', 'paleo'],
     name: 'Avocado Salad',
-    calories: 400,
-    nutriScore: 92,
-    rating: 4.8,
+    calories: {
+      detail: 400,
+      icon: 'flame',
+    },
+    nutriScore: {
+      detail: 92,
+      icon: 'restaurant',
+    },
+    rating: {
+      detail: 4.8,
+      icon: 'star',
+    },
     ratingNumber: 441,
   },
 ];
 
 const DietTypes = [
-  'Vegetarian',
-  'Vegan',
-  'Pescatarian',
-  'Gluten-free',
-  'Lactose-free',
-  'Keto',
-  'Paleo',
-  'Low FODMAP',
-  'Kid-friendly',
+  {
+    detail: 'Vegetarian',
+    icon: 'checkmark',
+  },
+  {
+    detail: 'Vegan',
+    icon: 'checkmark',
+  },
+  {
+    detail: 'Pescatarian',
+    icon: 'checkmark',
+  },
+  {
+    detail: 'Gluten-free',
+    icon: 'checkmark',
+  },
+  {
+    detail: 'Lactose-free',
+    icon: 'checkmark',
+  },
+  {
+    detail: 'Keto',
+    icon: 'checkmark',
+  },
+  {
+    detail: 'Paleo',
+    icon: 'checkmark',
+  },
+  {
+    detail: 'Low FODMAP',
+    icon: 'checkmark',
+  },
+  {
+    detail: 'Kid-friendly',
+    icon: 'checkmark',
+  },
 ];
 
 function Meals() {
@@ -47,7 +92,7 @@ function Meals() {
     <Section>
       <CenterLayout>
         <div className='pb-24'>
-          <SubHeading className='text-center'>meals</SubHeading>
+          <SubHeading className='mb-4 text-center'>meals</SubHeading>
           <H2 className='text-center'>
             Omnifood AI chooses from 5,000+ recipes
           </H2>
@@ -59,17 +104,17 @@ function Meals() {
               className='flex-1 rounded-xl overflow-hidden shadow-2xl duration-300
                               hover:shadow-[0_32px_64px_rgba(0,0,0,0.1)] hover:-translate-y-3'
             >
-              <Meal key={meal.name} data={meal} />
+              <MealCard key={meal.name} data={meal} />
             </div>
           ))}
           <div className='flex-1'>
             <H3>Works with any diet:</H3>
             <div key='margin' className='h-8' />
             <div className='flex flex-col gap-6'>
-              {DietTypes.map((diet) => (
-                <MealAttribute img={checkmark} key={diet}>
-                  <span>{diet}</span>
-                </MealAttribute>
+              {DietTypes.map(({ detail, icon }) => (
+                <DescriptionWithIcon img={IconType[icon]} key={detail}>
+                  {detail}
+                </DescriptionWithIcon>
               ))}
             </div>
           </div>
@@ -81,7 +126,8 @@ function Meals() {
             className='cursor-pointer text-lg text-main-normal
                      border-current border-b transition duration-300
                      hover:border-transparent'
-          >See all recipes &rarr;
+          >
+            See all recipes &rarr;
           </a>
         </div>
       </CenterLayout>

@@ -64,7 +64,7 @@ Kid-friendly
 
 **Omnifood AI chooses from 5,000+ recipes**
 
-Meal 1: Japanese Gyozas
+MealCard 1: Japanese Gyozas
 
 - Category: Vegetarian
 - Calories: 650
@@ -72,7 +72,7 @@ Meal 1: Japanese Gyozas
 - Average rating: 4.9
 - Number reviews: 537
 
-Meal 2: Avocado Salad
+MealCard 2: Avocado Salad
 
 - Category: Vegan and Paleo
 - Calories: 400
