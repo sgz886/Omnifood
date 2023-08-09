@@ -5,6 +5,8 @@ import FeaturedIn from './components/FeaturedIn';
 import Meals from './components/Meals';
 import Testimonial from './components/Testimonial';
 import Price from './components/Price';
+import Subscription from './components/Subscription';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Meals />
         <Testimonial />
         <Price />
+        <Subscription />
+        <Footer />
       </main>
     </>
   );

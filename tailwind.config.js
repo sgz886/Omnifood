@@ -15,6 +15,12 @@ module.exports = {
         'grey-tint': 'var(--color-grey-tint)',
         'grey-shade': 'var(--color-grey-shade)',
       },
+      backgroundImage: {
+        signupImage: `
+          linear-gradient(to right bottom, rgba(235, 151, 78, 0.35),rgba(230, 125, 34, 0.35)),
+          url('./assets/img/eating.jpg')
+        `,
+      },
     },
   },
   plugins: [],

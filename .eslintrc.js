@@ -20,5 +20,8 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'no-unused-vars': 'warn',
     'jsx-quotes': ['error', 'prefer-single'],
+    'jsx-a11y/label-has-associated-control': [2, {
+      assert: 'either',
+    }],
   },
 };
