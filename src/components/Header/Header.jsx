@@ -1,9 +1,9 @@
 import logo from '../../assets/img/omnifood-logo.png';
 import NavItem from './components/NavItem';
 
-const likeButtonStyle = `px-6 py-3 rounded-lg
-                          bg-main-normal text-background-normal
-                          hover:bg-main-shade hover:text-background-normal`;
+const fillStyle = `px-6 py-3 rounded-lg
+                    bg-main-normal text-background-normal
+                    hover:bg-main-shade hover:text-background-normal`;
 function Header() {
   return (
     <header
@@ -16,7 +16,7 @@ function Header() {
         <NavItem className='text-grey-normal'>Meals</NavItem>
         <NavItem className='text-grey-normal'>Testimonials</NavItem>
         <NavItem className='text-grey-normal'>Pricing</NavItem>
-        <NavItem className={likeButtonStyle}>Try for free</NavItem>
+        <NavItem className={fillStyle}>Try for free</NavItem>
       </nav>
     </header>
   );
