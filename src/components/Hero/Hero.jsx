@@ -13,13 +13,18 @@ import AvatarImage from './components/AvatarImage';
 
 function Hero() {
   return (
-    <Section className='pt-12 bg-background-tint'>
-      <CenterLayout className='max-w-[77.25rem] grid gap-24 grid-cols-2 items-center'>
-        <div>
+    <Section className='pt-12 bg-background-tint max-sm:px-2'>
+      <CenterLayout className='max-w-[77.25rem]
+        grid gap-x-24 grid-cols-2 items-center gap-y-12 justify-items-center
+        max-xl:max-w-[71rem] max-xl:gap-x-[6vw] max-xl:grid-cols-[5fr_4fr]
+        max-lg:gap-x-[calc(15vw-114px)]
+        max-md:grid-cols-1'
+      >
+        <div className='max-md:text-center'>
           <H1 className='mb-8'>
             A healthy meal delivered to your door, every single day
           </H1>
-          <p className='text-xl leading-8 mb-12'>
+          <p className='text-xl leading-8 mb-12 max-lg:mb-8'>
             The smart 365-days-per-year food subscription that will make you eat
             healthy again. Tailored to your personal tastes and nutritional
             needs.
@@ -30,8 +35,12 @@ function Hero() {
           <ButtonLink to='/' color='white'>
             Learn more &darr;
           </ButtonLink>
-          <div className='flex items-center gap-4 mt-20'>
-            <div className='flex'>
+          <div className='flex items-center gap-4 mt-20
+                          max-lg:mt-10
+                          max-[820px]:flex-col max-[820px]:items-start
+                          max-md:flex-row max-md:justify-center max-md:items-center max-md:mt-6'
+          >
+            <div className='flex shrink-0'>
               <AvatarImage src={c1} alt='customer' className='-mr-4 last:mr-0' />
               <AvatarImage src={c2} alt='customer' className='-mr-4 last:mr-0' />
               <AvatarImage src={c3} alt='customer' className='-mr-4 last:mr-0' />
@@ -39,13 +48,13 @@ function Hero() {
               <AvatarImage src={c5} alt='customer' className='-mr-4 last:mr-0' />
               <AvatarImage src={c6} alt='customer' className='-mr-4 last:mr-0' />
             </div>
-            <p className='text-lg font-semibold'>
+            <p className='text-lg font-semibold max-xl:text-base'>
               <span className='font-bold text-orange-500'>250,000+</span>
               &nbsp;meals delivered last year!
             </p>
           </div>
         </div>
-        <img src={hero} alt='' width='100%' />
+        <img src={hero} alt='' width='100%' className='max-md:w-3/5 max-sm:w-4/5' />
       </CenterLayout>
     </Section>
   );

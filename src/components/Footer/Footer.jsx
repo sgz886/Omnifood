@@ -10,8 +10,11 @@ function Footer() {
   return (
     <footer className='px-8 py-12'>
       <CenterLayout>
-        <div className='grid grid-cols-[1.5fr_1.5fr_1fr_1fr_1fr] gap-x-16 gap-y-24'>
-          <div className='flex flex-col'>
+        <div className='grid grid-cols-[1.5fr_1.5fr_1fr_1fr_1fr] gap-x-16 gap-y-16
+                        max-lg:gap-x-8
+                        max-md:grid-cols-6'
+        >
+          <div className='flex flex-col max-md:col-[1_/_4]'>
             <a href='/' className='mb-8'>
               <img className='h-[1.375rem]' src={logo} alt='logo' />
             </a>
@@ -30,7 +33,7 @@ function Footer() {
               Copyright © 2023 by Omnifood, Inc. All rights reserved.
             </FooterText>
           </div>
-          <div>
+          <div className='max-md:col-[4_/_-1]'>
             <div className='text-lg font-medium mb-10 leading-none'>
               Contact us
             </div>
@@ -44,7 +47,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div>
+          <div className='max-md:col-[1_/_3] max-md:row-start-1'>
             <div className='text-lg font-medium mb-10 leading-none'>
               Account
             </div>
@@ -55,7 +58,7 @@ function Footer() {
               <FooterLink to='/'>Android app</FooterLink>
             </div>
           </div>
-          <div>
+          <div className='max-md:col-[3_/_5] max-md:row-start-1'>
             <div className='text-lg font-medium mb-10 leading-none'>
               Company
             </div>
@@ -66,7 +69,7 @@ function Footer() {
               <FooterLink to='/'>Careers</FooterLink>
             </div>
           </div>
-          <div>
+          <div className='max-md:col-[5_/_-1] max-md:row-start-1'>
             <div className='text-lg font-medium mb-10 leading-none'>
               Resources
             </div>

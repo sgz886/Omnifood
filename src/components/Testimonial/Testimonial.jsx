@@ -20,6 +20,8 @@ import testimonialImg10 from '../../assets/img/gallery/gallery-10.jpg';
 import testimonialImg11 from '../../assets/img/gallery/gallery-11.jpg';
 import testimonialImg12 from '../../assets/img/gallery/gallery-12.jpg';
 
+import { anchors } from '../Header/components/RegularNavBar/RegularNavBar';
+
 const TestimonialData = [
   {
     picture: imgDave,
@@ -66,20 +68,21 @@ function Testimonial() {
   return (
     <Section
       className={classNames(
-        'pt-0 pr-0 pb-0 pl-0 bg-background-tint',
+        'pt-0 pb-0 pr-0 pl-0 bg-background-tint',
         'grid items-center grid-cols-[55fr_45fr]',
+        'max-lg:grid-cols-1 max-sm:px-0',
       )}
     >
-      <div className='p-24'>
-        <SubHeading className='mb-4'>Testimonials</SubHeading>
-        <H2 className='mb-24'>Once you try it, you can&apos;t go back</H2>
-        <div className='grid grid-cols-2 gap-x-20 gap-y-12'>
+      <div className='p-16 max-xl:px-12 max-lg:px-8 max-sm:px-4'>
+        <SubHeading id={anchors.testimonial} className='mb-4'>Testimonials</SubHeading>
+        <H2 className='mb-24 max-xl:text-3xl max-xl:mb-16'>Once you try it, you can&apos;t go back</H2>
+        <div className='grid grid-cols-2 gap-x-20 gap-y-12 max-xl:gap-x-16 max-sm:grid-cols-1'>
           {TestimonialData.map((testimonial) => (
             <TestimonialItem data={testimonial} key={testimonial.name} />
           ))}
         </div>
       </div>
-      <div className='p-4 grid grid-cols-3 gap-4'>
+      <div className='p-4 grid grid-cols-3 gap-4 max-lg:grid-cols-6 max-md:grid-cols-4'>
         {testimonialImages.map((image) => (
           <img key={image} src={image} alt='gallery' />
         ))}

@@ -16,12 +16,12 @@ function FeaturedIn() {
         >
           as featured in
         </div>
-        <div className='flex justify-around'>
-          <img className='h-8 opacity-50 brightness-0' src={techCrunchImg} alt='' />
-          <img className='h-8 opacity-50 brightness-0' src={businessInsiderImg} alt='' />
-          <img className='h-8 opacity-50 brightness-0' src={newYorkTimesImg} alt='' />
-          <img className='h-8 opacity-50 brightness-0' src={forbesImg} alt='' />
-          <img className='h-8 opacity-50 brightness-0' src={usaTodayImg} alt='' />
+        <div className='flex justify-around gap-x-2'>
+          <img className='max-h-8 opacity-50 brightness-0 min-w-0' src={techCrunchImg} alt='' />
+          <img className='max-h-8 opacity-50 brightness-0 min-w-0' src={businessInsiderImg} alt='' />
+          <img className='max-h-8 opacity-50 brightness-0 min-w-0' src={newYorkTimesImg} alt='' />
+          <img className='max-h-8 opacity-50 brightness-0 min-w-0' src={forbesImg} alt='' />
+          <img className='max-h-8 opacity-50 brightness-0 min-w-0' src={usaTodayImg} alt='' />
         </div>
       </CenterLayout>
     </Section>

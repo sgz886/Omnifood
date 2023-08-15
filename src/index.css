@@ -90,7 +90,14 @@ a {
   --color-grey-tint:#ddd;
 }
 html {
+  scroll-behavior: smooth;
   /* font-size: 62.5%; equals to 10px */
+  @media not (min-width: 1024px) {
+    font-size: 90%;
+  }
+  @media not (min-width: 768px){
+    font-size: 80%;
+  }
 }
 body {
   font-family: Rubik, sans-serif;

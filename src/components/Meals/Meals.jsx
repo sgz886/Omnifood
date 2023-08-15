@@ -9,6 +9,8 @@ import H3 from '../H3';
 import DescriptionWithIcon from '../DescriptionWithIcon';
 import IconType from '../DescriptionWithIcon/components/IconType';
 
+import { anchors } from '../Header/components/RegularNavBar/RegularNavBar';
+
 const MealsData = [
   {
     picture: meal1,
@@ -91,23 +93,27 @@ function Meals() {
   return (
     <Section>
       <CenterLayout>
-        <div className='pb-24'>
+        <div id={anchors.meals} className='pb-24'>
           <SubHeading className='mb-4 text-center'>meals</SubHeading>
           <H2 className='text-center'>
             Omnifood AI chooses from 5,000+ recipes
           </H2>
         </div>
-        <div className='flex justify-between gap-16'>
+        <div className='grid grid-cols-3 gap-x-16 gap-y-16
+                        max-lg:gap-x-10
+                        max-md:grid-cols-2
+                        max-sm:grid-cols-1'
+        >
           {MealsData.map((meal) => (
             <div
               key={meal.name}
-              className='flex-1 rounded-xl overflow-hidden shadow-2xl duration-300
+              className='rounded-xl overflow-hidden shadow-2xl duration-300
                               hover:shadow-[0_32px_64px_rgba(0,0,0,0.1)] hover:-translate-y-3'
             >
               <MealCard key={meal.name} data={meal} />
             </div>
           ))}
-          <div className='flex-1'>
+          <div className='sm:max-md:col-span-2 max-md:justify-self-center'>
             <H3>Works with any diet:</H3>
             <div key='margin' className='h-8' />
             <div className='flex flex-col gap-6'>

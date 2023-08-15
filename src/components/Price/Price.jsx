@@ -10,6 +10,8 @@ import nutrition from '../../assets/img/price/nutrition-outline.svg';
 import pause from '../../assets/img/price/pause-outline.svg';
 import PriceFeature from './components/PriceFeature';
 
+import { anchors } from '../Header/components/RegularNavBar/RegularNavBar';
+
 const priceInfo = [
   {
     price: 399,
@@ -84,16 +86,17 @@ const bestValueTagStyle = [
   'after:bg-main-tint after:px-20 after:py-2',
   'after:content-["best_value"] after:text-grey-normal',
   'after:uppercase after:text-sm after:leading-none after:font-bold',
-  'after:absolute after:rotate-45 after:top-[6%] after:right-[-18%]',
+  'after:absolute after:rotate-45 after:top-[30px] after:right-[-80px]',
+  'max-lg:after:top-[30px] max-lg:after:right-[-60px]',
 ];
 
 function Price() {
   return (
     <Section>
       <CenterLayout>
-        <SubHeading className='mb-4'>pricing</SubHeading>
-        <H2 className='mb-24'>Eating well without breaking the bank</H2>
-        <div className='grid grid-cols-2 gap-x-16 mb-12'>
+        <SubHeading id={anchors.price} className='mb-4'>pricing</SubHeading>
+        <H2 className='mb-24 max-lg:mb-16'>Eating well without breaking the bank</H2>
+        <div className='flex gap-x-16 gap-y-8 mb-12 justify-center items-center max-md:gap-x-8 max-sm:flex-col'>
           <PriceCard className='border-2' data={priceInfo[0]} />
           <PriceCard
             className={classNames(
@@ -107,7 +110,7 @@ function Price() {
           Prices include all applicable taxes. You can cancel at any time. Both
           plans include the following:
         </div>
-        <div className='grid grid-cols-4 gap-x-16'>
+        <div className='grid grid-cols-4 gap-x-16 gap-y-12 max-xl:gap-x-12 max-md:grid-cols-2 max-sm:grid-cols-1'>
           {priceFeatures.map((feature) => <PriceFeature key={feature.title} data={feature} />)}
         </div>
       </CenterLayout>

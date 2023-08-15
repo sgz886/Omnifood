@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import Hero from './components/Hero';
 import Header from './components/Header';
 import How from './components/How';
@@ -9,11 +10,27 @@ import Subscription from './components/Subscription';
 import Footer from './components/Footer';
 
 function App() {
+  const [headerFloat, setHeaderFloat] = useState(false);
+  const refFeaturedIn = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setHeaderFloat(!entry.isIntersecting);
+      },
+      {
+        rootMargin: '-96px',
+      },
+    );
+    observer.observe(refFeaturedIn.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-      <Header />
+      <Header headerFloat={headerFloat} />
       <main>
-        <Hero />
+        <div ref={refFeaturedIn}><Hero /></div>
         <FeaturedIn />
         <How />
         <Meals />

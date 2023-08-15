@@ -15,7 +15,10 @@ const fillToLength = (arr, length) => {
 };
 
 function PriceCard({ data, className }) {
-  const defaultStyle = 'p-12 border-background-tint rounded-xl w-9/12 first:justify-self-end';
+  const defaultStyle = [
+    'p-12 border-background-tint rounded-xl max-w-[400px] first:justify-self-end',
+    'max-lg:w-full',
+  ];
   const finalStyle = classNames(defaultStyle, className);
   const { price, description, details } = data;
   fillToLength(details, 4);

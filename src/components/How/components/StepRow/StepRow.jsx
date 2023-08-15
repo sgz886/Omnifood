@@ -7,7 +7,9 @@ function StepRow({ value }) {
   return (
     <div
       className='flex gap-x-16 items-center
-                      even:flex-row-reverse'
+                 even:flex-row-reverse
+                 max-xl:gap-[5vw]
+                 max-sm:flex-col max-sm:even:flex-col'
     >
       <div className='flex-1 flex flex-col gap-3'>
         <div className='text-[5.375rem] font-semibold text-grey-tint'>{id}</div>

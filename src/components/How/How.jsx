@@ -7,6 +7,8 @@ import pic2 from '../../assets/img/app/app-screen-2.png';
 import pic3 from '../../assets/img/app/app-screen-3.png';
 import Section from '../Section';
 
+import { anchors } from '../Header/components/RegularNavBar/RegularNavBar';
+
 const howToText = [
   {
     id: '01',
@@ -35,7 +37,7 @@ function How() {
   return (
     <Section>
       <CenterLayout>
-        <div className='pb-24'>
+        <div className='pb-24' id={anchors.how}>
           <SubHeading className='mb-4'>How it works</SubHeading>
           <H2>Your daily dose of health in 3 simple steps</H2>
         </div>

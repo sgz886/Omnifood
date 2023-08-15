@@ -17,11 +17,14 @@ function VerticalNavBar({ className }) {
           <img src={menuBurger} alt='menu' width='40px' />
         </button>
       )}
-      <RegularNavBar className={`flex-col gap-10 fixed right-6 top-6 bg-background-normal px-10 py-6 rounded-lg lg:hidden
-                                  transition-all ease-in-out duration-300
-                                  [&.show]:-translate-x-0
-                                  [&.hide]:translate-x-[125%]
-                                  ${visibility}`}
+      <RegularNavBar
+        className={`flex-col gap-10 fixed z-30 right-6 top-6 bg-background-normal px-10 py-6 rounded-lg shadow
+                    lg:hidden
+                    transition-all ease-in-out duration-300
+                    [&.show]:-translate-x-0
+                    [&.hide]:translate-x-[125%]
+                    ${visibility}`}
+        onNavClick={() => setMenuOpen(false)}
       >
         <button
           type='button'
