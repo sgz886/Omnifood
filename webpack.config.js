@@ -42,7 +42,7 @@ const config = {
         ],
       },
       {
-        test: /\.(png|jpg|gif|mp4|webm)$/i,
+        test: /\.(png|webp|jpg|gif|mp4|webm)$/i,
         type: 'asset/resource',
       },
       {
@@ -64,7 +64,8 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: 'public/index.html',
+      favicon: 'public/favicon.png',
     }),
   ],
   resolve: {

@@ -1,4 +1,4 @@
-import hero from '../../assets/img/hero.png';
+import hero from '../../assets/img/hero.webp';
 import c1 from '../../assets/img/customers/customer-1.jpg';
 import c2 from '../../assets/img/customers/customer-2.jpg';
 import c3 from '../../assets/img/customers/customer-3.jpg';

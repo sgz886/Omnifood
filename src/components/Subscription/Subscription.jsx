@@ -86,7 +86,7 @@ function Subscription() {
                   <option value='friend'>Friends and Family</option>
                   <option value='youtube'>Youtube Video</option>
                   <option value='podcast'>podcast</option>
-                  <option value='facebook'>Facebook add</option>
+                  <option value='facebook'>Facebook ads</option>
                   <option value='others'>others</option>
                 </select>
               </div>
