@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Hero from './components/Hero';
 import Header from './components/Header';
 import How from './components/How';
@@ -27,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <BrowserRouter>
       <Header headerFloat={headerFloat} />
       <main>
         <div ref={refFeaturedIn}><Hero /></div>
@@ -39,7 +40,7 @@ function App() {
         <Subscription />
         <Footer />
       </main>
-    </>
+    </BrowserRouter>
   );
 }
 
