@@ -109,3 +109,9 @@ body {
 h1 {
   font-size: 2rem;
 }
+
+@layer utilities {
+   .pause {
+     animation-play-state: paused;
+   }
+}

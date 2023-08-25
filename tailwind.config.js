@@ -21,6 +21,15 @@ module.exports = {
           url('./assets/img/eating.jpg')
         `,
       },
+      animation: {
+        scroll: '12s scrollHorizontal linear infinite normal',
+      },
+      keyframes: {
+        scrollHorizontal: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
     },
   },
   plugins: [],
