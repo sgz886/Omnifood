@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+import { useEffect, useRef, useState } from 'react';
 import Section from '../Section';
 import CenterLayout from '../CenterLayout';
 import SubHeading from '../SubHeading';
@@ -90,6 +92,27 @@ const DietTypes = [
 ];
 
 function Meals() {
+  const [mealsFocus, setMealsFocus] = useState(false);
+  const refMeals = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setMealsFocus(entry.isIntersecting);
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+    observer.observe(refMeals.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const howItWorksStyle = [
+    'sm:max-md:col-span-2 max-md:justify-self-center duration-700',
+    { 'translate-x-20 opacity-0': !mealsFocus },
+    { 'translate-x-0 opacity-100': mealsFocus },
+  ];
+
   return (
     <Section>
       <CenterLayout>
@@ -113,7 +136,7 @@ function Meals() {
               <MealCard key={meal.name} data={meal} />
             </div>
           ))}
-          <div className='sm:max-md:col-span-2 max-md:justify-self-center'>
+          <div ref={refMeals} className={classNames(howItWorksStyle)}>
             <H3>Works with any diet:</H3>
             <div key='margin' className='h-8' />
             <div className='flex flex-col gap-6'>

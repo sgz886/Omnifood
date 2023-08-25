@@ -11,7 +11,7 @@ import H1 from '../H1';
 import ButtonLink from '../ButtonLink';
 import AvatarImage from './components/AvatarImage';
 
-function Hero() {
+function Hero({ innerRef }) {
   return (
     <Section className='pt-12 bg-background-tint max-sm:px-2'>
       <CenterLayout className='max-w-[77.25rem]
@@ -54,7 +54,7 @@ function Hero() {
             </p>
           </div>
         </div>
-        <img src={hero} alt='' width='100%' className='max-md:w-3/5 max-sm:w-4/5' />
+        <img ref={innerRef} src={hero} alt='' width='100%' className='max-md:w-3/5 max-sm:w-4/5' />
       </CenterLayout>
     </Section>
   );

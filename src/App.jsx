@@ -18,12 +18,8 @@ function App() {
       ([entry]) => {
         setHeaderFloat(!entry.isIntersecting);
       },
-      {
-        rootMargin: '-96px',
-      },
     );
     observer.observe(refFeaturedIn.current);
-
     return () => observer.disconnect();
   }, []);
 
@@ -31,7 +27,8 @@ function App() {
     <BrowserRouter>
       <Header headerFloat={headerFloat} />
       <main>
-        <div ref={refFeaturedIn}><Hero /></div>
+        {/* <div ref={refFeaturedIn}><Hero /></div> */}
+        <Hero innerRef={refFeaturedIn} />
         <FeaturedIn />
         <How />
         <Meals />
