@@ -115,7 +115,7 @@ function Meals() {
 
   return (
     <Section>
-      <CenterLayout>
+      <CenterLayout className='overflow-hidden'>
         <div id={anchors.meals} className='pb-24'>
           <SubHeading className='mb-4 text-center'>meals</SubHeading>
           <H2 className='text-center'>
