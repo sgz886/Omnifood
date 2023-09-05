@@ -15,6 +15,7 @@ module.exports = {
   },
   ignorePatterns: ['dist/**', 'node_modules/**', '.idea/**'],
   rules: {
+    'import/no-extraneous-dependencies': 'off',
     'no-restricted-exports': 'off',
     'react/prop-types': 'off',
     'react/jsx-one-expression-per-line': 'off',
